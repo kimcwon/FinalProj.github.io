@@ -312,7 +312,6 @@ label{
 #contact h1 {
     font-size: 2em;
     font-weight: 700;
-    margin-top: 10%;
     text-align: center;
     letter-spacing: 2px;
     animation: scrollreveal linear both;
@@ -322,7 +321,7 @@ label{
 
 .map {
     width: 100%;
-    padding: 2% 15%;
+    padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -473,7 +472,11 @@ label{
     }
 
     .media-icons a {
-        font-size: small;
+        font-size: medium;
+    }
+
+    .media-icons a:hover {
+        font-size: 2em;
     }
     
     #check:checked ~ #contact h1 {
