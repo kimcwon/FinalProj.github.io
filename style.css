@@ -479,11 +479,7 @@ label{
     #check:checked ~ #contact .media-icons {
         filter: blur(4px);
     }
-    
-    .img-box:nth-child(2) {
-        display: none;
-    }
-    
+
     .img-box:nth-child(3) {
         display: none;
     }
@@ -513,7 +509,7 @@ label{
 @keyframes scrollrevealxx {
     from {
         opacity: 0;
-        transform: translatex(100px);
+        transform: translatex(30px);
     }
     to {
         opacity: 1;
