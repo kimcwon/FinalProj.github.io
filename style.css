@@ -464,6 +464,18 @@ label{
         font-size: small;
     }
 
+    #contact h1 {
+        font-size: medium;
+    }
+
+    #contact .text {
+        font-size: small;
+    }
+
+    .media-icons a {
+        font-size: small;
+    }
+    
     #check:checked ~ #contact h1 {
         filter: blur(4px);
     }
@@ -478,6 +490,10 @@ label{
 
     #check:checked ~ #contact .media-icons {
         filter: blur(4px);
+    }
+
+    .img-box:nth-child(2) {
+        display: none;
     }
 
     .img-box:nth-child(3) {
