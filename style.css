@@ -480,6 +480,10 @@ label{
         filter: blur(4px);
     }
     
+    .img-box:nth-child(2) {
+        display: none;
+    }
+    
     .img-box:nth-child(3) {
         display: none;
     }
