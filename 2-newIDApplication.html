@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ID Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="2-application form.css">
+    <script src="2-application form.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <input type="checkbox" id="check">
+    <header>
+        <a href="index.html"><img src="images/logo.png" class="logo"></a>
+        <nav class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#contact">CONTACT</a>
+        </nav>
+        <label class="check" for="check">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+    </header>
+
+    <section class="form">
+        <form
+        name="IDReplacementForm"
+        action="https://script.google.com/macros/s/AKfycbzLcOQP2QAXDR-DMn1V-p5tAMH_rnN_CMPWIInA-fi2EYP4Rm_N-AKOQET6j9_QNxHC/exec"
+        onsubmit="return validateForm()"
+        method="post">
+
+            <div class="container">
+                <center><h3>Application for New Identification Card</h3></center>
+                <div class="row">
+                    <div class="col-50">
+                        <label for="applicationtype">Application Type:</label>
+                        <select name="applicationtype" id="applicationtype">
+                            <option value="" disabled selected></option>
+                            <option value="Transferee">Transferee</option>
+                            <option value="Late Filling">Late Filling</option>
+                            <option value="Shiftee">Shiftee</option>
+                        </select>
+                    </div>
+
+                    <div class="col-50">
+                        <label for="level">Educational Level:</label>
+                        <select name="level" id="level" onchange="updateCollegeDropdown()">
+                            <option value="" disabled selected></option>
+                            <option value="Undergrad">Undergrad</option>
+                            <option value="College of Law">College of Law</option>
+                            <option value="Graduate School">Graduate School</option>
+                            <option value="Open University">Open University</option>
+                            <option value="Institute of Technology">Institute of Technology</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <center><h3> Student Information</h3></center>
+                        
+                <div class="row">
+                    <div class="column">
+                        <label for="studentnumber"> Student Number: </label>
+                        <input type="text" name="studentnumber" id="studentnumber" maxlength="15">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="firstname"> First Name: </label>
+                        <input type="text" name="firstname" id="firstname">
+                    </div>
+
+                    <div class="col">
+                        <label for="middlename"> Middle Name: </label>
+                        <input type="text" name="middlename" id="middlename">
+                    </div>
+                    <div class="col">
+                        <label for="lastname"> Last Name: </label>
+                        <input type="text" name="lastname" id="lastname">
+                    </div>
+                    <div class="col">
+                        <label for="suffix">Suffix: </label>
+                        <input type="text" name="suffix" id="suffix">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-50">
+                        <label for="disableMiddleName"> No Middle Name: </label>
+                        <input type="checkbox" name="disableMiddleName" id="disableMiddleName" onchange="checkbox()">
+                    </div>
+                    <div class="col-50">
+                        <label for="disableSuffix"> No Suffix: </label>
+                        <input type="checkbox" name="disableSuffix" id="disableSuffix" onchange="checkbox()">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-50">
+                        <label for="gender"> Gender: </label>
+                        <input type="radio" name="gender" value="MALE"> MALE
+                        &nbsp;
+                        <input type="radio" name="gender" value="FEMALE"> FEMALE
+                    </div>
+
+                    <div class="col-50">
+                        <label for="birthday"> Date of Birth: </label>
+                        <input type="date" name="birthday">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-50">
+                        <label for="college"> College: </label>
+                        <select name="college" id="college">
+                        <option value="" disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-50">
+                        <label for="pys"> Program, Year & Section </label>
+                        <input type="text" name="pys" id="pys">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="address"> Home Address: </label>
+                        <input type="text" name="address" id="address">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-50">
+                        <label for="phonenumber"> Phone/Mobile Number: </label>
+                        <input type="text" name="phonenumber" id="phonenumber" maxlength="11">
+                    </div>
+
+                    <div class="col-50">
+                        <label for="email"> Email Address: </label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <center><h3> Emergency Contact</h3></center>
+
+                <div class="emergency-notification">
+                    In case of emergency, please notify:
+                </div>
+                
+                <div class="row">
+                    <div class="column">
+                        <label for="name"> Complete Name: </label>
+                        <input type="text" name="ename" id="name">
+
+                        <label for="contactno">Phone/Mobile No.: </label>
+                        <input type="text" name="ephonenumber" id="ephonenumber" maxlength="11">
+
+                        <label for="address"> Address: </label>
+                        <input type="text" name="eaddress" id="eaddress">
+
+                    </div>
+                </div>
+
+                <button type="submit" value="Submit" class="btn">Submit</button>
+
+            </div>    
+
+        </form>
+    </section>
+    <script>
+        document.addEventListener("scroll", function(){
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    padding: 40px 100px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+header .logo{
+    position: relative;
+    width: 75px;
+}
+
+header .navigation a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: color 0.5s ease-in-out;
+}
+
+header .navigation a:not(:last-child) {
+    margin-right: 30px;
+}
+
+header .navigation a:hover{
+    background: goldenrod;
+    color: black;
+    transition: 0.5s;
+}
+
+#home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),maroon), url(images/home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.welcome-text{
+    width: 90%;
+    color: whitesmoke;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.welcome-text h1{
+    margin: 10px 0 40px;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.new-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 12px 34px;
+    font-size: small;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.new-btn:hover{
+    border: 1px solid goldenrod;
+    background: goldenrod;
+    color: black;
+    transition: 0.5s;
+}
+
+.rep-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 12px 34px;
+    font-size: small;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.rep-btn:hover{
+    border: 1px solid goldenrod;
+    background: goldenrod;
+    color: black;
+    transition: 0.5s;
+}
+
+label{
+    display: none;
+}
+
+#check {
+    z-index: 3;
+    display: none;
+}
+
+/*---About PUP--*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-color: #f2e9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box {
+    width: 100px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(images/image-1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+
+.img-box:nth-child(2) {
+    background: url(images/image-3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(3) {
+    background: url(images/image-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(4) {
+    background: url(images/image-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box:nth-child(5) {
+    background: url(images/image-5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.img-box h3 {
+    color: maroon;
+    text-shadow: 1px 1px goldenrod;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.img-box:hover {
+    width: 300px;
+}
+
+.img-box:hover h3 {
+    opacity: 1;
+    bottom: 25px;
+}
+
+.about-PUP {
+    position: relative;
+    width: 100%;
+    height: 130vh;
+    background-color: rgb(133, 18, 18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-PUP h1 {
+    color: #f2e9ff;
+    font-size: 2em;
+    width: 70%;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    transition: text-shadow 0.6s;
+    animation: scrollreveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.about-PUP h1:hover {
+    text-shadow: black 2px 2px;
+}
+
+.about-PUP .about-p {
+    color: #f2e9ff;
+    font-size: medium;
+    width: 70vw;
+    font-weight: 500;
+    text-align: center;
+    margin: 2% 15%;
+    transition: text-shadow 0.6s;
+    animation: scrollreveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.about-PUP .about-p:hover {
+    text-shadow: black 2px 2px;
+}
+
+.vision {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 100px;
+    background-color: #f2e9ff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 30vw;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(images/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: box-shadow 0.5s;
+    animation: scrollrevealx linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.img:hover {
+    box-shadow: 0 0 20px 0px;
+}
+
+
+.textbox {
+    width: 50vw;
+    font-weight: 600;
+    margin: 10px;
+    font-size: 15px;
+    text-align: center;
+    animation: scrollrevealxx linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    letter-spacing: 0.5px;
+}
+
+/*---Contact Us--*/
+#contact {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 100px;
+    background-color: #f2e9ff;
+}
+
+#contact h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 10%;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: scrollreveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.map {
+    padding: 2% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map iframe {
+    width: 80vw;
+    height: 400px;
+    filter: invert(100%);
+    transition: 0.5s;
+    animation: scrollreveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.text {
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background: goldenrod;
+    padding: 20px 12px;
+    border-radius: 10px;
+    transition: box-shadow 0.5s;
+    animation: scrollreveal linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.text:hover {
+    box-shadow: 0 0 20px 0px;
+}
+
+.media-icons {
+    padding: 3% 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.media-icons a {
+    color: maroon;
+    margin: 20px;
+    font-size: 2em;
+    transition: font-size 0.5s;
+}
+
+.media-icons a:hover {
+    font-size: 3em;
+}
+
+
+/*---Animations--*/
+
+@media (max-width: 960px) {
+    header .navigation{
+        display: none;
+    }
+
+    label{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: whitesmoke;
+        transition: 0.3s;
+        transition-property: color;
+    }
+
+    label:hover{
+        color: goldenrod;
+    }
+
+    label .close-btn{
+        display: none;
+    }
+
+    #check:checked ~ header .navigation {
+        z-index: 2;
+        position: fixed;
+        background: rgba(128,0,0,0.5);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked ~ section .welcome-text {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ header .logo {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked ~ header label .menu-btn {
+        display: none;
+    }
+
+    #check:checked ~ header label .close-btn {
+        z-index: 2;
+        display: block;
+        position: relative;
+    }
+
+    #check:checked ~ section .banner .gallery .img-box {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ section .about-PUP {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ section .vision .container .textbox {
+        filter: blur(4px);
+    }
+    #check:checked ~ section .vision .container .img {
+        filter: blur(4px);
+    }
+
+    section .vision .container .textbox {
+        font-size: x-small;
+    }
+
+    #check:checked ~ #contact h1 {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ #contact .map {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ #contact .text {
+        filter: blur(4px);
+    }
+
+    #check:checked ~ #contact .media-icons {
+        filter: blur(4px);
+    }
+}
+
+
+@keyframes scrollreveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes scrollrevealxx {
+    from {
+        opacity: 0;
+        transform: translatex(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}
+
+@keyframes scrollrevealx {
+    from {
+        opacity: 0;
+        transform: translatex(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0px);
+    }
+}

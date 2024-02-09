@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>PUP ID Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <header>
+        <a href="index.html"><img src="images/logo.png" class="logo"></a>
+        <nav class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <label for="check">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+    </header>
+<section id="home">
+    <div class="welcome-text">
+        <h1>Welcome to PUP ID Application</h1>
+        <a href="2-newIDApplication.html" class="new-btn"> NEW ID Application</a>
+        <a href="2-replacementIDApplication.html" class="rep-btn"> REPLACEMENT ID Application</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="banner">
+        <div class="gallery">
+            <div class="img-box"><h3>PUP Pylon</h3></div>
+            <div class="img-box"><h3>PUP Main Campus</h3></div>
+            <div class="img-box"><h3>PUP Lagoon</h3></div>
+            <div class="img-box"><h3>PUP Obelisk</h3></div>
+            <div class="img-box"><h3>PUP Shrine</h3></div>
+        </div>
+    </div>
+    <div class="about-PUP">
+        <h1>About PUP</h1>
+            <p class="about-p">The Polytechnic University of the Philippines (PUP) is a government educational institution governed by Republic Act Number 8292 known as the Higher Education Modernization Act of 1997, and its Implementing Rules and Regulations contained in the Commission on Higher Education Memorandum Circular No. 4, series 1997. PUP is one of the country's highly competent educational institutions. The PUP Community is composed of the Board of Regents, University Officials, Administrative and Academic Personnel, Students, various Organizations, and the Alumni. PUP is a public, non-sectarian, non-profit institution of higher learning primarily tasked with harnessing the tremendous human resources potential of the nation by improving the physical, intellectual and material well-being of the individual through higher occupational, technical and professional instruction and training in the applied arts and sciences related to the fields of commerce, business administration, and technology.</p>
+    </div>
+    <div class="vision">
+        <div class="container">
+                <div class="img"></div>
+                <div class="textbox">
+                    <h3>Vision</h3>
+                    <p>PUP: The National Polytechnic University</p><br>
+                    <h3>Mission</h3>
+                    <p>Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities through a re-engineered polytechnic university by committing to: provide democratized access to educational opportunities for the holistic development of individuals with global perspective; offer industry-oriented curricula that produce highly-skilled professionals with managerial and technical capabilities and a strong sense of public service for nation building; embed a culture of research and innovation continuously develop faculty and employees with the highest level of professionalism; engage public and private institutions and other stakeholders for the attainment of social development goal; establish a strong presence and impact in the international academic community.</p>
+            </div>
+        </div>
+    </div>
+</section> 
+
+<section id="contact">
+    <h1>Contact</h1>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.020032454375!2d121.00818067576552!3d14.597934377140499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9dd976ededf%3A0xbaaa357c5585b8c2!2sPolytechnic%20University%20of%20the%20Philippines!5e0!3m2!1sen!2sph!4v1706278292035!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="text">
+        <h3>Contact Us</h3>
+        <p><b>Email</b>
+            <br>
+            <i>studentservices@pup.edu.ph</i>
+            <br>
+            <br>
+            <b>Postal Mail</b>
+            <br>
+            <i><b>Office of the Student Services</b>
+            <br>
+            Room 212 Charlie del Rosario Student Development Center
+            <br>
+            PUP A. Mabini Campus, Anonas St., Sta. Mesa
+            <br>
+            Manila, Philippines 1016
+            </i>
+            <br>
+            <br>
+            <b>Telephone</b>
+            <br>
+            <i>(63 2) 335-1PUP (335-1787) or 335-1777 local 352</i></p>
+    </div>
+    <div class="media-icons">
+        <a href="https://www.facebook.com/ThePUPOfficial/" class="icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/ThePUPOfficial/" class="icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/thepupofficial/" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@PUPCreaTV/" class="icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pup.edu.ph/" class="icon"><i class="fa-solid fa-globe"></i></i></a>
+    </div>
+</section>
+<script>
+    document.addEventListener("scroll", function(){
+        const header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+</script>
+</body>
+</html>
