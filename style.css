@@ -456,6 +456,14 @@ label{
         font-size: x-small;
     }
 
+    section .about-PUP h1 {
+        font-size: medium;
+    }
+
+    section .about-PUP .about-p {
+        font-size: small;
+    }
+
     #check:checked ~ #contact h1 {
         filter: blur(4px);
     }
@@ -470,6 +478,18 @@ label{
 
     #check:checked ~ #contact .media-icons {
         filter: blur(4px);
+    }
+    
+    .img-box:nth-child(3) {
+        display: none;
+    }
+
+    .img-box:nth-child(4) {
+        display: none;
+    }
+
+    .img-box:nth-child(5) {
+        display: none;
     }
 }
 
